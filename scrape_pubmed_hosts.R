@@ -142,7 +142,7 @@ getPubMedCites = function(species_binomial, taxid_search = FALSE, virus_related 
 
 # create filenames
 output_loc = "./output/"
-save_file = paste(output_loc, "hostcitationcounts_pubmed_append.csv", sep="")
+save_file = paste(output_loc, "hostcitationcounts_pubmed_13072022.csv", sep="")
 
 # for all host species get time series of publication effort (axis axis == impossible to lookup)
 species_vec = unique(spp$Host)
@@ -182,7 +182,7 @@ for(i in 1:length(species_vec)){
 # -------------- read in scrape and ensure all species are included ------------
 
 # effort cites
-effort = read.csv("./output/hostcitationcounts_pubmed.csv")
+effort = read.csv("./output/hostcitationcounts_pubmed_13072022.csv")
 
 # any NAs
 if(any(is.na(effort$NumPubs))){ print("NAs found") } else{ print("Data complete") }
